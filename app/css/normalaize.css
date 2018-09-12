@@ -1,0 +1,92 @@
+/* NORMALIZE */
+/* ================================================ */
+html, body, div, span, applet, main, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, main, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  margin: 0px;
+    margin-padding: 0px;
+    margin-font-family: Arial, Tahoma, sans-serif;
+    margin-line-height: 1;
+    margin-background-color: #ffffff;
+    margin-height: 100%;
+    margin-position: relative;
+    margin-font-size: 14px;
+    margin--webkit-font-smoothing: antialiased;
+    margin--moz-osx-font-smoothing: grayscale; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: "";
+    content-content: none; }
+
+q:before, q:after {
+  content: "";
+    content-content: none; }
+
+table {
+  border-collapse: collapse;
+    border-collapse-border-width: 0px;
+    border-collapse-padding: 0px;
+    border-collapse-margin: 0px; }
+
+html {
+  height: 100%;
+    height--webkit-text-size-adjust: none;
+    height--ms-text-size-adjust: none; }
+
+input, textarea {
+  color: #333;
+    color-outline: none;
+    color-border-radius: 0;
+    color--moz-border-radius: 0;
+    color--webkit-border-radius: 0;
+    color--webkit-appearance: none; }
+
+input[type="button"], input[type="submit"] {
+  cursor: pointer;
+    cursor--webkit-appearance: none;
+    cursor-outline: none; }
+
+button {
+  cursor: pointer;
+    cursor--webkit-appearance: none;
+    cursor-outline: none; }
+
+td, form {
+  margin: 0px;
+    margin-padding: 0px; }
+
+a {
+  color: #000100;
+    color--webkit-transition: all 0.3s linear;
+    color--o-transition: all 0.3s linear;
+    color-transition: all 0.3s linear;
+    color-text-decoration: none;
+    color-outline: none;
+    color--webkit-tap-highlight-color: transparent;
+    color--webkit-tap-highlight-color: transparent; }
+
+* {
+  -webkit-box-sizing: border-box;
+    -webkit-box-sizing-box-sizing: border-box; }
+
+*:before, *:after {
+  -webkit-box-sizing: border-box;
+    -webkit-box-sizing-box-sizing: border-box; }
+
+.clearfix:after {
+  content: "";
+    content-display: block;
+    content-height: 0;
+    content-clear: both;
+    content-visibility: hidden; }
