@@ -60,8 +60,7 @@ gulp.task('clean', function() {
 gulp.task('build', ['sass', 'scripts'], function() {
 
     var buildCss = gulp.src([ // Переносим CSS стили в продакшен
-        'app/css/main.css',
-        'app/css/libs.min.css'
+        'app/css/main.css'
         ])
     .pipe(cssnano())
     .pipe(gulp.dest('dist/css'))
@@ -73,7 +72,6 @@ gulp.task('build', ['sass', 'scripts'], function() {
     .pipe(gulp.dest('dist/img'))
 
     var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшен
-    .pipe(uglify())
     .pipe(gulp.dest('dist/js'))
 
     var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен

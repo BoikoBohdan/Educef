@@ -1,6 +1,523 @@
-/*import Подключаем все библиотеки и внешнии стили*/
-@import "_libs.sass"
+header, section, footer
+	max-width: 1180px
+	margin: 0 auto
+	width: 100%	
+	font-family: Roboto, Arial
 
-/*normalize стили*/
-@import "_normalaize.sass"
-/*общие стиили*/
+body
+	overflow-x: hidden
+
+.line1px
+	width: 100%
+	height: 1px
+	background: #b6b6b6
+.head__wrapper
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	justify-content: space-between
+	padding: 25px 0 15px
+
+.head__logo
+	width: 211px
+	& img
+		width: 100%
+
+.head__search
+	display: flex
+
+.search__title 
+	display: flex
+	font-size: 18px
+	font-weight: 500
+	text-transform: uppercase
+	& i
+		width: 21px
+		height: 21px
+		border: 2px solid#b6b6b6
+		font-size: 14px
+		line-height: 17px
+		color: #b6b6b6
+		display: flex
+		justify-content: space-around
+		margin-right: 15px
+	& span
+		margin-right: 28px
+.search
+	display: flex
+	align-items: center
+.search__input
+	position: relative
+	width: 330px
+	height: 37px
+	& input
+		width: 100%
+		height: 100%
+		border: 1px solid #b6b6b6
+		border-radius: 2px
+		padding: 0 15px
+		color: #b6b6b6
+		font-size: 14px
+		font-weight: 500
+	& i
+		position: absolute
+		right: 15px
+		top: 50%
+		transform: translateY(-50%)
+		color: #b6b6b6
+
+.head__instruction
+	text-transform: uppercase
+	background: #07d79b
+	color: #fff
+	border-radius: 5px
+	padding: 12px
+
+.head__buttons span
+	text-transform: uppercase
+	padding-left: 15px
+
+.head__buttons span:first-child
+	border-right: 1px solid #b6b6b6
+	padding-right: 15px
+
+.navigation
+	margin: 33px auto
+	&__list
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-evently
+		list-style: none
+		min-height: 65px
+	&__item
+		margin-right: 60px
+		text-transform: uppercase
+		font-weight: 500
+		cursor: pointer
+		transition: 0.3s
+		&.active
+			color: #50e6b9
+		&:hover
+			color: #50e6b9
+
+.filters
+	&__header
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 30px
+		& h2
+			font-weight: normal
+			text-transform: uppercase
+	&__result
+		margin-right: 2px
+	&__list
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		list-style: none
+		margin-bottom: 25px
+	&__item
+		margin-right: 5px
+		margin-bottom: 15px
+		border-radius: 25px
+		padding: 12px 25px
+		border: 2px solid #c7c7c7
+		display: flex
+		align-items: center
+		color: #c7c7c7
+		&:hover
+			border-color: #07d79b
+			color: #07d79b
+			font-weight: 500
+		& i 
+			margin: 2px 3px 0 0 
+.filter
+	&__selects
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		list-style: none
+
+	&__select
+		width: 24%
+		min-width: 200px
+		height: 35px
+		margin-right: 13px
+		margin-bottom: 20px
+		position: relative
+		cursor: pointer
+		&-name
+			width: 100%
+			height: 100%
+			border: 1px solid #c7c7c7
+			border-radius: 3px
+			padding: 0 10px
+			color: #bdbdbd
+			display: flex
+			align-items: center
+			justify-content: space-between
+		&-dropdown
+			display: none
+			position: absolute
+			list-style: none
+			top: 50px
+			padding: 40px 25px 15px 30px
+			background: #fff
+			z-index: 2
+			width: 100%
+			box-shadow: 1px 1px 10px 2px #D8D8D8
+			& li 
+				margin-bottom: 12px
+				display: flex
+				align-items: center
+				justify-content: space-between
+				& .number
+					color: #bdbdbd
+				& .filter__name
+					margin-left: 5px
+					font-size: 16px
+			& li:first-child
+				font-weight: 500
+				font-size: 18px
+				margin-bottom: 35px
+			&:before
+				content: ''
+				position: absolute
+				width: 18px
+				height: 10px
+				background: #fff
+				border-top: 1px solid rgba(199, 199, 199, 0.7)
+				top: -8px
+				right: 6px
+				transform: rotateZ(45deg)
+			&:after
+				content: ''
+				position: absolute
+				width: 18px
+				height: 10px
+				background: #fff
+				border-top: 1px solid rgba(199, 199, 199, 0.7)
+				top: -8px
+				right: 13px
+				transform: rotateZ(-45deg)
+		&:nth-child(4n)
+			margin-right: 0
+.filter__select.active .filter__select-dropdown
+	display: block
+
+.category-nav
+	margin-top: 20px
+	background: #fafafa
+	display: flex
+	justify-content: space-between
+	align-items: center
+	height: 40px
+	padding: 0 7px
+	&__left
+		font-size: 14px
+		display: block
+		border-left: 2px solid #b2b2b2
+		color: #898989
+		padding-left: 13px
+	&__right
+		display: flex
+		align-items: center
+	&__sort-by
+		display: flex
+		align-items: center
+		margin-right: 5px
+		& span
+			margin-right: 7px
+		& select
+			border: 1px solid #b2b2b2
+			border-radius: 3px
+	&__show
+		display: flex
+		align-items: center
+		cursor: pointer
+		& i 
+			margin-left: 10px
+			&.active
+				color: #50e6b9
+.courses
+	&__list
+		display: flex
+		flex-wrap: wrap
+		list-style: none
+		margin: 0 -15px 100px
+	&__item
+		margin: 30px 15px 
+		padding-bottom: 30px
+		min-width: 280px
+		width: 25%
+		box-shadow: 0px 4px 20px 4px #eee
+		transition: 1s
+	&__image
+		position: relative
+		width: 100%
+		& img
+			width: 100%
+		&:after
+			content: 'bundl'
+			position: absolute
+			left: 30px
+			bottom: 0
+			transform: translateY(50%)
+			color: #fff
+			background: #ff9142
+			display: flex
+			align-items: center
+			justify-content: space-around
+			height: 20px
+			width: 60px
+			text-transform: uppercase
+			font-size: 12px
+			border-radius: 2px
+		&:before
+			content: "best seller"
+			position: absolute
+			right: 0
+			top: 0
+			transform: rotateZ(90deg) translateX(37px) translateY(-37px)
+			background: #07d79b
+			color: #fff
+			text-transform: uppercase
+			width: 100px
+			height: 26px
+			display: flex
+			align-items: center
+			justify-content: space-around
+			font-size: 14px	
+	&__title
+		font-size: 18px
+		margin: 30px 40px 0 30px
+		word-wrap: wrap
+		letter-spacing: 0.2px
+		font-weight: 500
+		opacity: 0.9
+	&__author
+		display: flex
+		margin: 15px 40px 0 30px
+		& img
+			width: 24px
+			height: 24px
+			margin-right: 10px
+		& p 
+			font-size: 14px
+			font-weight: 500
+			opacity: 0.7
+	&__footer
+		display: flex
+		margin: 15px 40px 0 30px
+		justify-content: space-between
+		& div
+			padding-right: 10px
+	&__price
+		float: right
+		color: #07d79b
+		font-size: 18px
+		cursor: pointer
+	&__like
+		opacity: 0.5
+		cursor: pointer
+	&__people
+		opacity: 0.5
+		cursor: pointer
+	&__show-list
+		width: 100%
+		max-width: 46%
+		min-width: 400px
+		margin: 30px 2%
+		display: flex
+		flex-wrap: wrap
+		padding: 0
+		align-items: center
+		justify-content: flex-end
+		& .courses__image
+			width: 50%
+		& .courses__title
+			width: 50%
+			padding: 0 15px
+			margin: 0
+		& .courses__author
+			display: block
+			margin-right: 0
+
+.footer
+	max-width: 100%
+	background-color: #343a48
+	&__wrapper
+		display: flex
+		max-width: 1180px
+		width: 100%
+		margin: 0 auto
+		padding: 45px 0 50px
+		color: #7d8087
+		& ul
+			list-style: none
+		& a
+			text-decoration: none
+			color: #fff
+			display: block
+			font-weight: 300
+			margin-bottom: 5px
+		& h5
+			color: #fff
+			font-weight: 300
+			margin: 43px 0 20px
+		& li
+			margin-top: 10px 
+			cursor: pointer
+			&:hover
+				color: #fff
+		& p 
+			margin-bottom: 15px
+	&__left 
+		display: flex
+		width: 50%
+	&__first
+		width: 70%
+	&__adress
+		margin-top: 20px
+	&__second
+		width: 30%
+	&__right
+		display: flex
+		width: 50%
+	&__third
+		width: 30%
+	&__fourth
+		width: 70%
+
+/* The container */
+.container 
+    display: block
+    position: relative
+    padding-left: 35px
+    margin-bottom: 12px
+    cursor: pointer
+    font-size: 22px
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+
+
+/* Checkbox */
+.filter__text-left
+	width: 100%
+.container
+	display: flex
+	width: 100%
+	align-items: center
+	&__text
+		width: 100%
+		display: flex
+		align-items: center
+		justify-content: space-between
+		font-size: 16px
+.container input 
+    position: absolute
+    opacity: 0
+    cursor: pointer
+.checkmark 
+    position: absolute
+    top: 0
+    left: 0
+    height: 25px
+    width: 25px
+    border: 2px solid #eee
+    background-color: #fff
+.container:hover input ~ .checkmark 
+    background-color: #ccc
+.container input:checked ~ .checkmark 
+    background-color: #07d79b
+.checkmark:after 
+    content: ""
+    position: absolute
+    display: none
+.container input:checked ~ .checkmark:after 
+    display: block
+.container .checkmark:after 
+    left: 9px
+    top: 5px
+    width: 5px
+    height: 10px
+    border: solid white
+    border-width: 0 3px 3px 0
+    transform: rotate(45deg)
+
+.hidden
+	display: none
+	
+//media 990px
+@media screen and (max-width: 990px)
+	.filter__selects
+		justify-content: space-even
+	.filter__select
+		margin-right: 10px
+		margin-left: 10px
+	section, header, footer
+		padding: 0 20px
+
+@media screen and (max-width: 800px)
+	.search__title span
+		display: none
+		
+@media screen and (max-width: 680px)
+	.head__search
+		position: absolute
+		top: 100px
+		left: 50%
+		transform: translateX(-50%)
+	.head__instruction
+		position: absolute
+		top: 150px
+		left: 50%
+		transform: translateX(-50%)
+	.head__wrapper
+		margin-bottom: 100px
+	.footer__wrapper
+		flex-wrap: wrap
+	.footer__left
+		width: 100%
+	.footer__right
+		width: 100%
+		flex-direction: row-reverse
+
+@media screen and (max-width: 480px)
+	.head__search
+		top: 120px
+		width: 100vw	
+		padding: 0 20px
+	.search__input
+		width: 100%
+	.head__instruction
+		top: 170px
+		width: 85vw
+		margin: 0 5vw
+		left: 0
+		transform: translateX(0%)
+	.head__wrapper
+		justify-content: space-around
+	.footer__left
+		display: flex
+		flex-wrap: wrap
+	.filter__select
+		margin: 10px auto
+	.filter__select:nth-child(4n)
+		margin: 10px auto
+	.courses__item
+		margin: 30px auto
+	.footer img
+		width: 50vw
+	.navigation__item
+		width: 50%
+		padding: 0
+		margin: 0
+		text-align: center
+	.courses__show-list .courses__author
+		display: flex
+	.courses__show-list
+    min-width: 300px
