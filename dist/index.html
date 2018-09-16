@@ -12,15 +12,404 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, 
 	user-scalable=no, maximum-scale=1">
-	<title>Главная</title>
+	<title>Educef</title>
 	<link href="https://fonts.googleapis.com/
-	css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" 
+	css?family=Roboto:300,300i,400,400i,600,600i,700,700i" 
 	rel="stylesheet">
 	<link rel="stylesheet" href="css/normalaize.css"> <!-- Подключаем normalize CSS -->
 	<link rel="stylesheet" href="css/main.css"> <!-- Подключаем CSS -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" 
+	integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"><!-- Подключаем fontawesome -->
 </head>
 <body>
-	<script type="text/javascript" src="js/common.js"></script><!-- Подключаем  наших скриптов -->
+	<header class="head">
+		<div class="head__wrapper">
+			<div class="head__logo">
+				<img src="img/logo.png" alt="Educef">
+			</div>
+			<div class="head__search search">
+				<div class="search__title">
+					<i class="fa fa-question" aria-hidden="true"></i>
+					<span>Categoties</span>
+				</div>
+				<div class="search__input">
+					<input type="text" placeholder="Search you cource">
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</div>
+			</div>
+			<div class="head__like">
+				<i class="fa fa-heart" aria-hidden="true"></i>
+			</div>
+			<div class="head__cart">
+				<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+			</div>
+			<div class="head__instruction">
+				Become an instruction
+			</div>
+			<div class="head__buttons">
+				<span>Sign in</span>
+				<span>Sign up</span>
+			</div>
+		</div>
+	</header>
+	<div class="line1px"></div>
+	<section class="navigation">
+		<nav>
+			<ul class="navigation__list">
+				<li class="navigation__item active">Home</li>
+				<li class="navigation__item">Explore</li>
+				<li class="navigation__item">Course</li>
+				<li class="navigation__item">Partner</li>
+				<li class="navigation__item">Event</li>
+				<li class="navigation__item">Membership</li>
+				<li class="navigation__item">Forum</li>
+				<li class="navigation__item">Elements</li>
+				<li class="navigation__item">Pages</li>
+			</ul>
+		</nav>
+	</section>
+	<section class="filters">
+		<div class="filters__header">
+			<h2 class="filters__active">Active filters</h2>
+			<div class="filters__result">
+				Result:
+				<span>980 matches</span>
+			</div>
+		</div>
+		<ul class="filters__list">
+			<span>No filter</span>
+		</ul>
+		<ul class="filter__selects">
+			<li class="filter__select" data-target ="topics">
+				<div class="filter__select-name"><span>Topics</span><img src="img/arrow.png" alt="-"></div>
+				<ul class="filter__select-dropdown">
+					<li>Topics</li>
+					<li><div class="filter__text-left">
+						<label class="container">
+						  <input type="checkbox" data-topics="c++">
+						  <span class="checkmark"></span>
+						  <div class="container__text">
+							  <span class="filter__name">Programming C++</span>
+							  <div class="span number">1</div>
+							 </div>
+						</label>
+						</div>
+					</li>
+					<li><div class="filter__text-left">
+						<label class="container">
+						  <input type="checkbox" data-topics="angular">
+						  <span class="checkmark"></span>
+						  <div class="container__text">
+							  <span class="filter__name">Programming Angular</span>
+							  <div class="span number">1</div>
+							 </div>
+						</label>
+						</div>
+					</li>
+					<li><div class="filter__text-left">
+						<label class="container">
+						  <input type="checkbox" data-topics="mysql">
+						  <span class="checkmark"></span>
+						  <div class="container__text">
+							  <span class="filter__name">Programming MySQL</span>
+							  <div class="span number">1</div>
+							 </div>
+						</label>
+						</div>
+					</li>
+				</ul>
+			</li>
+			<li class="filter__select" data-target ="skill">
+				<div class="filter__select-name"><span>Skill level</span><img src="img/arrow.png" alt="-"></div>
+				<ul class="filter__select-dropdown">
+					<li>Skill level</li>
+					<li><div class="filter__text-left">
+						<label class="container">
+						  <input type="checkbox" data-skill="low">
+						  <span class="checkmark"></span>
+						  <div class="container__text">
+							  <span class="filter__name">Low</span>
+							  <div class="span number">1</div>
+							 </div>
+						</label>
+						</div>
+					</li>
+					<li><div class="filter__text-left">
+						<label class="container">
+						  <input type="checkbox" data-skill="high">
+						  <span class="checkmark"></span>
+						  <div class="container__text">
+							  <span class="filter__name">High</span>
+							  <div class="span number">2</div>
+							 </div>
+						</label>
+						</div>
+					</li>
+				</ul>
+			</li>
+			<li class="filter__select" data-target ="lang">
+				<div class="filter__select-name"><span>Course languages</span><img src="img/arrow.png" alt="-"></div>
+				<ul class="filter__select-dropdown">
+					<li>Course languages</li>
+					<li><div class="filter__text-left">
+						<label class="container">
+						  <input type="checkbox" data-lang="en">
+						  <span class="checkmark"></span>
+						  <div class="container__text">
+							  <span class="filter__name">English</span>
+							  <div class="span number">3</div>
+							 </div>
+						</label>
+						</div>
+					</li>
+					<li><div class="filter__text-left">
+						<label class="container">
+						  <input type="checkbox" data-lang="ua">
+						  <span class="checkmark"></span>
+						  <div class="container__text">
+							  <span class="filter__name">Ukraine</span>
+							  <div class="span number">0</div>
+							 </div>
+						</label>
+						</div>
+					</li>
+				</ul>
+			</li>
+			<li class="filter__select" data-target ="duration">
+				<div class="filter__select-name"><span>Duration</span><img src="img/arrow.png" alt="-"></div>
+				<ul class="filter__select-dropdown">
+					<li>Duration</li>
+					<li><div class="filter__text-left">
+						<label class="container">
+						  <input type="checkbox" data-duration="1">
+						  <span class="checkmark"></span>
+						  <div class="container__text">
+							  <span class="filter__name">1 hour</span>
+							  <div class="span number">2</div>
+							 </div>
+						</label>
+						</div>
+					</li>
+					<li><div class="filter__text-left">
+						<label class="container">
+						  <input type="checkbox" data-duration="2">
+						  <span class="checkmark"></span>
+						  <div class="container__text">
+							  <span class="filter__name">2 hours</span>
+							  <div class="span number">1</div>
+							 </div>
+						</label>
+						</div>
+					</li>
+				</ul>
+			</li>
+			<li class="filter__select" data-target ="feature">
+				<div class="filter__select-name"><span>Feature</span><img src="img/arrow.png" alt="-"></div>
+				<ul class="filter__select-dropdown">
+					<li>Feature</li>
+					<li><div class="filter__text-left">
+						<label class="container">
+						  <input type="checkbox" data-feature="none">
+						  <span class="checkmark"></span>
+						  <div class="container__text">
+							  <span class="filter__name">None</span>
+							  <div class="span number">0</div>
+							 </div>
+						</label>
+						</div>
+					</li>
+					<li><div class="filter__text-left">
+						<label class="container">
+						  <input type="checkbox" data-feature="yes">
+						  <span class="checkmark"></span>
+						  <div class="container__text">
+							  <span class="filter__name">Yes</span>
+							  <div class="span number">3</div>
+							 </div>
+						</label>
+						</div>
+					</li>
+				</ul>
+			</li>
+			<li class="filter__select" data-target ="colaboration">
+				<div class="filter__select-name"><span>Colaboration</span><img src="img/arrow.png" alt="-"></div>
+				<ul class="filter__select-dropdown">
+					<li>Colaboration</li>
+					<li><div class="filter__text-left">
+						<label class="container">
+						  <input type="checkbox" data-colaboration="yes">
+						  <span class="checkmark"></span>
+						  <div class="container__text">
+							  <span class="filter__name">Yes</span>
+							  <div class="span number">1</div>
+							 </div>
+						</label>
+						</div>
+					</li>
+					<li><div class="filter__text-left">
+						<label class="container">
+						  <input type="checkbox" data-colaboration="no">
+						  <span class="checkmark"></span>
+						  <div class="container__text">
+							  <span class="filter__name">No</span>
+							  <div class="span number">2</div>
+							 </div>
+						</label>
+						</div>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+	<section class="category-nav">
+		<h6 class="category-nav__left">Course</h6>
+		<div class="category-nav__right">
+			<div class="category-nav__sort-by">
+				<span>Sort by:</span>
+				<select name="Select by" id="sort">
+					<option value="">None</option>
+					<option value="1">High to low</option>
+					<option value="0">Low to high</option>
+				</select>
+			</div>
+			<div class="category-nav__show">
+				<i class="fa fa-list-ul" aria-hidden="true" data-show="list"></i>
+				<i class="fa fa-th active" aria-hidden="true" data-show="block"></i>
+			</div>
+		</div>
+	</section>
+	<section class="courses">
+		<ul class="courses__list">
+			<li class="courses__item" 
+			data-topics="angular" data-skill="high" data-lang="en" data-duration="1" data-feature="yes" data-colobaration="yes" data-price="300">
+				<div class="courses__image">
+					<img src="img/angular.png" alt="Programing">
+				</div>
+				<h2 class="courses__title">Neutal Networks And For Deep Learning</h2>
+				<div class="courses__author">
+					<img src="img/author.jpg" alt="Author">
+					<p>Anthony <br> Leath</p>
+				</div>
+				<div class="courses__footer">
+					<div class="courses__like">
+						<i class="fa fa-heart" aria-hidden="true"></i>
+						349
+					</div>
+					<div class="courses__people">
+						<i class="fa fa-users" aria-hidden="true"></i>
+						2678
+					</div>
+					<h6 class="courses__price">300$</h6>
+				</div>
+			</li>
+			<li class="courses__item" 
+			data-topics="c++" data-skill="low" data-lang="en" data-duration="2" data-feature="yes" data-colobaration="no" data-price="100">
+				<div class="courses__image">
+					<img src="img/c++.png" alt="Programing">
+				</div>
+				<h2 class="courses__title">Neutal Networks And For Deep Learning</h2>
+				<div class="courses__author">
+					<img src="img/author.jpg" alt="Author">
+					<p>Anthony <br> Leath</p>
+				</div>
+				<div class="courses__footer">
+					<div class="courses__like">
+						<i class="fa fa-heart" aria-hidden="true"></i>
+						349
+					</div>
+					<div class="courses__people">
+						<i class="fa fa-users" aria-hidden="true"></i>
+						2678
+					</div>
+					<h6 class="courses__price">100$</h6>
+				</div>
+			</li>
+			<li class="courses__item" 
+			data-topics="mysql" data-skill="high" data-lang="en" data-duration="2" data-feature="yes" data-colobaration="no" data-price="200">
+				<div class="courses__image">
+					<img src="img/mysql.png" alt="Programing">
+				</div>
+				<h2 class="courses__title">Neutal Networks And For Deep Learning</h2>
+				<div class="courses__author">
+					<img src="img/author.jpg" alt="Author">
+					<p>Anthony <br> Leath</p>
+				</div>
+				<div class="courses__footer">
+					<div class="courses__like">
+						<i class="fa fa-heart" aria-hidden="true"></i>
+						349
+					</div>
+					<div class="courses__people">
+						<i class="fa fa-users" aria-hidden="true"></i>
+						2678
+					</div>
+					<h6 class="courses__price">200$</h6>
+				</div>
+			</li>
+		</ul>
+	</section>
+	<footer class="footer">
+		<div class="footer__wrapper">
+			<div class="footer__left">
+				<div class="footer__first">
+						<div class="footer__logo">
+						<img src="img/logo.png" alt="Educef">
+					</div>
+					<div class="footer__adress">
+						Education, Inc. <br>
+						3601 Seneca Street, New York City <br>
+						NY 1001, USA
+					</div>
+					<ul class="footer__socials">
+						<li class="footer__social">
+						</li>
+						<li class="footer__social">
+						</li>
+						<li class="footer__social">
+						</li>
+						<li class="footer__social">
+						</li>
+						<li class="footer__social">
+						</li>
+						<li class="footer__social">
+						</li>
+					</ul>
+				</div>
+				<div class="footer__second">
+					<h5 class="footer__title">System</h5>
+					<ul class="footer__list">
+						<li>Help center</li>
+						<li>Support forum</li>
+						<li>Affiliate</li>
+						<li>Explore</li>
+						<li>Pricing</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer__right">
+				<div class="footer__third">
+					<h5 class="footer__title">More</h5>
+					<ul class="footer__list">
+						<li>About us</li>
+						<li>Blog</li>
+						<li>Service</li>
+						<li>Sign in</li>
+						<li>Sign up</li>
+					</ul>
+				</div>
+				<div class="footer__fourth">
+					<div class="get-touch">
+						<h5 class="get-touch__title">Get in touch</h5>
+						<p class="get-touch__text">Contact us if you need <br> help with anything</p>
+						<a href="tel:(+01)2675286897" class="footer__tel">(+ 01)2675286897</a>
+						<a href="tel:(+01)2120286473" class="footer__tel">(+ 01)2120286473</a>
+						<a href="mailto: help@rubikthemes.com" class="footer__email">help@rubikthemes.com</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 	<script type="text/javascript" src="js/libs.min.js"></script><!-- Подключаем библиотек -->
+	<script type="text/javascript" src="js/common.js"></script><!-- Подключаем  наших скриптов -->
 </body>
 </html>
